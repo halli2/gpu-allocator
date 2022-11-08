@@ -24,7 +24,7 @@ log = "0.4"
 thiserror = "1.0"
 # Only needed for vulkan.  Disable all default features as good practice,
 # such as the ability to link/load a Vulkan library.
-ash = { git = "https://github.com/ash-rs/ash", rev = "51f5997", optional = true, default-features = false, features = ["debug"] }
+ash = { git = "https://github.com/halli2/ash", optional = true, default-features = false, features = ["debug"] }
 # ash = { version = ">=0.34, <=0.37", optional = true, default-features = false, features = ["debug"] }
 # Only needed for visualizer.
 imgui = { version = "0.8", features = ["tables-api"], optional = true }
@@ -47,8 +47,8 @@ optional = true
 
 [dev-dependencies]
 # Enable the "loaded" feature to be able to access the Vulkan entrypoint.
-ash = { git = "https://github.com/ash-rs/ash", rev = "51f5997", default-features = false, features = ["debug", "loaded"] }
-ash-window = "0.10.0"
+ash = { git = "https://github.com/halli2/ash", default-features = false, features = ["debug", "loaded"] }
+ash-window = { git = "https://github.com/halli2/ash" }
 raw-window-handle = "0.4"
 winit = "0.26"
 imgui-winit-support = { version = "0.8", default-features = false, features = ["winit-26"] }
